@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast Your Vote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d35400;
+        }
+        form {
+            background: #fff;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"], select, input[type="submit"] {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #e67e22;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #ca6f1e;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cast Your Vote</h1>
+    <p>Verify yourself and select a candidate to vote.</p>
+    
+    <form method="POST" action="/vote">
+        <input type="text" name="user_id" placeholder="Enter User ID" required><br>
+        
+        <select name="candidate" required>
+            <option value="">-- Select Candidate --</option>
+            <option value="Candidate A">Candidate A</option>
+            <option value="Candidate B">Candidate B</option>
+            <option value="Candidate C">Candidate C</option>
+        </select><br>
+        
+        <input type="submit" value="Submit Vote">
+    </form>
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
